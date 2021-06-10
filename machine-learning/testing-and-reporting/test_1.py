@@ -4,7 +4,7 @@ import os
 import glob
 from sklearn.metrics import classification_report
 
-files = glob.glob("./tests/tests_*.csv")
+files = glob.glob("./tests/test_*.csv")
 
 
 data_inst = []
