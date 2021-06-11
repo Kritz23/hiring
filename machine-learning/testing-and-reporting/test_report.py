@@ -5,8 +5,6 @@ import glob
 from sklearn.metrics import classification_report
 
 files = glob.glob("./tests/test_*.csv")
-
-
 data_inst = []
 
 for i in files:
@@ -15,7 +13,6 @@ for i in files:
         data_inst.append((row["truth"],row["prediction"],os.path.basename(i)))
 
     
-
 @pytest.mark.parametrize("a, b, c",data_inst)
 def test_string(a,b,c):
     assert a == b, c
