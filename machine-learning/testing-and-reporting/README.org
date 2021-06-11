@@ -66,7 +66,7 @@ The code should have the following:
 Made a Pytest script which takes in the directory containing the ~test_*.csv~ files and gives output all the failure cases with a classification report for all the files. Did not understand how to make a plugin module for Pytest and what were the expectations.
 
 * Running the script
-1. Make sure the script is in the same directory as the ~/tests~ folder.
+1. Make sure the ~test_report.py~ script is in the same directory as the ~/tests~ folder.
 2. Run the requirements.txt file.
 3. Run the script as:
    ~$pytest -s~
