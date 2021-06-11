@@ -67,7 +67,7 @@ Made a Pytest script which takes in the directory containing the ~test_*.csv~ fi
 
 * Running the script
 1. Make sure the ~test_report.py~ script is in the same directory as the ~/tests~ folder.
-2. Run the requirements.txt file.
-3. Run the script as:
+2. Run the ~requirements.txt~ file.
+3. Run the ~test_report.py~ script as:
    ~$pytest -s~
 4. Voila! You have all the failure cases with the classification reports.
