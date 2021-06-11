@@ -62,22 +62,12 @@ The code should have the following:
    alongside.
 3. README with instructions on setting up and using this new testing approach.
 
-** Guidelines
-+ If you are adding any dependency, make sure to specify those in the
-  installation steps. Feel free to use our [[https://github.com/Vernacular-ai/styleguide][styleguide]] where we recommend using
-  [[https://python-poetry.org/][poetry]] for package management.
-+ If parts of solutions are not done, for example test discovery, feel free to
-  mock around them and mention the same in the solution README.
+* Solution
+Made a Pytest script which takes in the directory containing the ~test_*.csv~ files and gives output all the failure cases with a classification report for all the files. Did not understand how to make a plugin module for Pytest and what were the expectations.
 
-* Evaluation Criteria
-+ *Working* of the plugin. We will run data file provided in ~./data/~ and expect to
-  see 47 test failures.
-+ Program and *approach*.
-+ Quality of *README and usage documentation*.
-
-** Good to haves  
-+ Optional parts of the assignment.
-+ Good version control hygiene.
-+ Additional features that show newly failing cases, etc.
-+ Single report with classification metrics /and/ failing and recovered cases.
-+ Packaged pytest module.
+* Running the script
+1. Make sure the script is in the same directory as the ~/tests~ folder.
+2. Run the requirements.txt file.
+3. Run the script as:
+   ~$pytest -s~
+4. Voila! You have all the failure cases with the classification reports.
