@@ -62,12 +62,14 @@ The code should have the following:
    alongside.
 3. README with instructions on setting up and using this new testing approach.
 
-* Solution
-Made a Pytest script which takes in the directory containing the ~test_*.csv~ files and gives output all the failure cases with a classification report for all the files. Did not understand how to make a plugin module for Pytest and what were the expectations.
+** Solution
+Made a Pytest script ~test_report.py~ which takes in the directory containing the ~test_*.csv~ files and gives output all the failure cases with a classification report for all the files. Did not understand how to make a plugin module for Pytest and what were the expectations. Update: Made an additional script ~test_adv.py~ that highlights newly failing cases and recovered cases.
 
-* Running the script
+** Running the script
 1. Make sure the ~test_report.py~ script is in the same directory as the ~/tests~ folder.
 2. Run: ~$pip install -r requirements.txt~
 3. Run the ~test_report.py~ script as:
-   ~$pytest -s~
-4. Voila! You have all the failure cases with the classification reports.
+   ~$pytest test_report.py -s~
+4. Run the ~test_adv.py~ script as:
+   ~$pytest test_adv.py -s~
+5. Voila! You have all the failure cases with the classification reports from step 3. Also, you can see the cell numbers (mapping in the csv file) for newly failing and recovered cases from step 4.
