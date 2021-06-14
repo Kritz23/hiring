@@ -8,25 +8,18 @@ files = glob.glob("./tests/test_*.csv")
 data_inst = []
 
 for i in files:
-    data = pd.read_csv(i)
-    for index, row in data.iterrows():
-        data_inst.append((row["truth"],row["prediction"],os.path.basename(i)))
-
-    
-@pytest.mark.parametrize("a, b, c",data_inst)
-def test_string(a,b,c):
-    assert a == b, c
-
-
-@pytest.mark.parametrize("f_name",files)
-def test_print(f_name):
-
-	data = pd.read_csv(f_name)
+	data = pd.read_csv(i)
 	y_true = data["truth"]
 	y_pred = data["prediction"]
 	print()
 	print("------------------------------------------------------------------")
-	print("Classification Report for file ",os.path.basename(f_name))
+	print("Classification Report for file ",os.path.basename(i))
 	print("------------------------------------------------------------------")
 	print(classification_report(y_true, y_pred))
-	#assert True
+	for index, row in data.iterrows():
+		data_inst.append((row["truth"],row["prediction"],os.path.basename(i)))
+
+    
+@pytest.mark.parametrize("a, b, c", data_inst)
+def test_string(a,b,c):
+    assert a == b, c
